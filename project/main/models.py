@@ -9,7 +9,6 @@ class Category(models.Model):
 class News(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    image = models.ImageField(blank=True, null=True)
     views = models.IntegerField(default=0)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
